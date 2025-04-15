@@ -7,6 +7,17 @@ const Recipe = (props) => {   // props-ban érkeznek az adatok
     <div>
         <img src={BASE_URL + image} />
         <h2>{name}</h2>
+        
+
+        <h3>Hozzávalók:</h3>
+        <ul>
+            { ingredients.map(hozzavalo => <li>{hozzavalo}</li>) }
+        </ul>
+
+        <h3>Elkészítés:</h3>
+        <p>
+            {description}
+        </p>
 
     </div>
   )

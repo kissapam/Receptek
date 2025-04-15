@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'      // CTRL + szóköz és importál
 
 import Recipe from './components/Recipe'  // importálni kell a felhasznált komponenst
 
@@ -15,9 +15,9 @@ useEffect(() => {         // hogy egyszer fusson le
   .then( (receptek) => { setReceptek(receptek) })
 }, [] )                   // üress a tömb, ezért fut le egyszer. Nincs beállítva figyelés
 
-  return (
+  return (   // ...recept => id=(recept.id) name={recept.name}  
     <div>
-      {receptek.map(recept => <Recipe {...recept} />)}
+      {receptek.map(recept => <Recipe {...recept} />)}    
       </div>
   )
 }
